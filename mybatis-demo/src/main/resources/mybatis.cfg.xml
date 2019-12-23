@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--mybatis 主要设置 数据源 全局设置 类型设置 插件设置 缓存设置-->
+    <environments default="mybatis-demo">
+        <environment id="mybatis-demo">
+            <!--事务管理-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--数据源-->
+            <dataSource type="UNPOOLED">
+                <property name="url" value="jdbc:mysql://192.168.56.51:3306/mybatis_demo?characterEncoding=utf8 &amp; serverTimezone=UTC "/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="username" value="root"/>
+                <property name="password" value="1234qwer=QWER"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="mapperxml/student.mapper.xml"></mapper>
+    </mappers>
+</configuration>
